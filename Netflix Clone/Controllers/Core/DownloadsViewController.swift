@@ -15,7 +15,7 @@ class DownloadsViewController: UIViewController {
     private let downloadedTable: UITableView = {
        
         let table = UITableView()
-        table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
+        //table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
         return table
     }()
 
@@ -24,6 +24,10 @@ class DownloadsViewController: UIViewController {
         view.backgroundColor = .systemBackground
         title = "Downloads"
         view.addSubview(downloadedTable)
+
+        let nib = UINib(nibName: "TitleTableViewCell", bundle: nil)
+        downloadedTable.register(nib, forCellReuseIdentifier: TitleTableViewCell.identifier) //
+
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         downloadedTable.delegate = self

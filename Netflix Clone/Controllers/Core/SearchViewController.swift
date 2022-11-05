@@ -14,7 +14,7 @@ class SearchViewController: UIViewController {
 
     private let discoverTable: UITableView = {
         let table = UITableView()
-        table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
+        //table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
         return table
     }()
     
@@ -32,7 +32,11 @@ class SearchViewController: UIViewController {
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         
         view.backgroundColor = .systemBackground
-        
+
+        let nib = UINib(nibName: "TitleTableViewCell", bundle: nil)
+        discoverTable.register(nib, forCellReuseIdentifier: TitleTableViewCell.identifier) //
+
+
         view.addSubview(discoverTable)
         discoverTable.delegate = self
         discoverTable.dataSource = self
