@@ -9,17 +9,17 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
-    
+    @IBOutlet weak var discoverTable: UITableView! {
+        didSet {
+            discoverTable.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
+        }
+    }
+
     private var titles: [Title] = [Title]()
 
-    private let discoverTable: UITableView = {
-        let table = UITableView()
-        table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
-        return table
-    }()
-    
     private let searchController: UISearchController = {
-        let controller = UISearchController(searchResultsController: SearchResultsViewController())
+        let searchResultsViewController = StoryboardScene.SearchResultsViewController.initialScene.instantiate()
+        let controller = UISearchController(searchResultsController: searchResultsViewController)
         controller.searchBar.placeholder = "Search for a Movie or a Tv show"
         controller.searchBar.searchBarStyle = .minimal
         return controller
@@ -32,13 +32,18 @@ class SearchViewController: UIViewController {
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         
         view.backgroundColor = .systemBackground
-        
+
+        let nib = UINib(nibName: "TitleTableViewCell", bundle: nil)
+        discoverTable.register(nib, forCellReuseIdentifier: TitleTableViewCell.identifier) //
+
+
         view.addSubview(discoverTable)
         discoverTable.delegate = self
         discoverTable.dataSource = self
         navigationItem.searchController = searchController
         
         navigationController?.navigationBar.tintColor = .white
+        
         fetchDiscoverMovies()
         
         searchController.searchResultsUpdater = self

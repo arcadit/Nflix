@@ -38,7 +38,6 @@
 		712713592914F45D0011FB80 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712713582914F45D0011FB80 /* SearchViewController.storyboard */; };
 		7127135B2914FF2C0011FB80 /* SearchResultsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7127135A2914FF2C0011FB80 /* SearchResultsViewController.storyboard */; };
 		71B111A62913E982000DD16C /* TitlePreviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B111A52913E982000DD16C /* TitlePreviewViewController.storyboard */; };
-		90FE456F291B896D008616EC /* UpcomingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90FE456E291B896D008616EC /* UpcomingViewController.storyboard */; };
 		D4D16ED0913056A4CF424592 /* Pods_Netflix_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43935CE2F8DBE0643BDFFB90 /* Pods_Netflix_Clone.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +75,6 @@
 		712713582914F45D0011FB80 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
 		7127135A2914FF2C0011FB80 /* SearchResultsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResultsViewController.storyboard; sourceTree = "<group>"; };
 		71B111A52913E982000DD16C /* TitlePreviewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TitlePreviewViewController.storyboard; sourceTree = "<group>"; };
-		90FE456E291B896D008616EC /* UpcomingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpcomingViewController.storyboard; sourceTree = "<group>"; };
 		BFDA06AABD39E9A16860212F /* Pods-Netflix Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netflix Clone.debug.xcconfig"; path = "Target Support Files/Pods-Netflix Clone/Pods-Netflix Clone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,8 +191,6 @@
 			children = (
 				0A6209BB2734615B00A88D71 /* HomeViewController.swift */,
 				0A6209BD2734617600A88D71 /* UpcomingViewController.swift */,
-				90FE456E291B896D008616EC /* UpcomingViewController.storyboard */,
-				0A6209BB2734615B00A88D71 /* HomeViewController.swift */,
 				0A6209BF2734618C00A88D71 /* SearchViewController.swift */,
 				0A6209AA2734603E00A88D71 /* MainTabBarViewController.swift */,
 				0A6209C1273461A800A88D71 /* DownloadsViewController.swift */,
@@ -313,7 +309,6 @@
 				0A6209B32734603E00A88D71 /* LaunchScreen.storyboard in Resources */,
 				0A6209B02734603E00A88D71 /* Assets.xcassets in Resources */,
 				712713592914F45D0011FB80 /* SearchViewController.storyboard in Resources */,
-				90FE456F291B896D008616EC /* UpcomingViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -191,7 +191,6 @@
 		0AE30379277F603200CBC18F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0A6209BB2734615B00A88D71 /* HomeViewController.swift */,
 				0A6209BD2734617600A88D71 /* UpcomingViewController.swift */,
 				90FE456E291B896D008616EC /* UpcomingViewController.storyboard */,
 				0A6209BB2734615B00A88D71 /* HomeViewController.swift */,
@@ -312,8 +311,11 @@
 				71B111A62913E982000DD16C /* TitlePreviewViewController.storyboard in Resources */,
 				0A6209B32734603E00A88D71 /* LaunchScreen.storyboard in Resources */,
 				0A6209B02734603E00A88D71 /* Assets.xcassets in Resources */,
-				712713592914F45D0011FB80 /* SearchViewController.storyboard in Resources */,
+<<<<<<< HEAD
 				90FE456F291B896D008616EC /* UpcomingViewController.storyboard in Resources */,
+=======
+				712713592914F45D0011FB80 /* SearchViewController.storyboard in Resources */,
+>>>>>>> origin/storyboard
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
