@@ -15,7 +15,7 @@ class UpcomingViewController: UIViewController {
     private let upcomingTable: UITableView = {
        
         let table = UITableView()
-        table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
+//      table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
         return table
     }()
     
@@ -25,8 +25,12 @@ class UpcomingViewController: UIViewController {
         title = "Upcoming"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
-        
-        
+
+        // TODO
+        // Storyboard化で以下に置き換えが必要になる可能性あり
+        // table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
+        let nib = UINib(nibName: "TitleTableViewCell", bundle: nil) // カスタムセルクラス名で`nib`を作成する
+        upcomingTable.register(nib, forCellReuseIdentifier: TitleTableViewCell.identifier) //
         view.addSubview(upcomingTable)
         upcomingTable.delegate = self
         upcomingTable.dataSource = self
