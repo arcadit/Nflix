@@ -23,6 +23,10 @@ class UpcomingViewController: UIViewController {
         title = "Upcoming"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
+        
+        upcomingTable.delegate = self
+        upcomingTable.dataSource = self
+        
         fetchUpcoming()
     }
     

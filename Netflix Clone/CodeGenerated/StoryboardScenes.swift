@@ -17,6 +17,11 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<Netflix_Clone.TitlePreviewViewController>(storyboard: Self.self)
   }
+  internal enum UpcomingViewController: StoryboardType {
+    internal static let storyboardName = "UpcomingViewController"
+
+    internal static let initialScene = InitialSceneType<Netflix_Clone.UpcomingViewController>(storyboard: Self.self)
+  }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name
 
