@@ -63,7 +63,7 @@
                         </prototypes>
                     </tableView>
                     <connections>
-                        <outlet property="upcomingTable" destination="zLH-YQ-5nq" id="o6L-tM-9sq"/>
+                        <outlet property="upcomingTable" destination="zLH-YQ-5nq" id="IJf-UO-HoK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjv-a4-juT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
