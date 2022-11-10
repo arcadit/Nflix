@@ -12,6 +12,16 @@ import UIKit
 
 // swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
 internal enum StoryboardScene {
+  internal enum SearchResultsViewController: StoryboardType {
+    internal static let storyboardName = "SearchResultsViewController"
+
+    internal static let initialScene = InitialSceneType<Netflix_Clone.SearchResultsViewController>(storyboard: Self.self)
+  }
+  internal enum SearchViewController: StoryboardType {
+    internal static let storyboardName = "SearchViewController"
+
+    internal static let initialScene = InitialSceneType<Netflix_Clone.SearchViewController>(storyboard: Self.self)
+  }
   internal enum TitlePreviewViewController: StoryboardType {
     internal static let storyboardName = "TitlePreviewViewController"
 
