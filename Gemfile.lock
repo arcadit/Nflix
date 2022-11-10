@@ -102,7 +102,6 @@ GEM
       rexml (~> 3.2.4)
 
 PLATFORMS
-  universal-darwin-21
   x86_64-darwin-19
 
 DEPENDENCIES
@@ -111,4 +110,4 @@ DEPENDENCIES
   synx
 
 BUNDLED WITH
-   2.3.24
+   2.3.25
