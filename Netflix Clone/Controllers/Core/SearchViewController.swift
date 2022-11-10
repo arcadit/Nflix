@@ -18,7 +18,8 @@ class SearchViewController: UIViewController {
     private var titles: [Title] = [Title]()
 
     private let searchController: UISearchController = {
-        let controller = UISearchController(searchResultsController: SearchResultsViewController())
+        let searchResultsViewController = StoryboardScene.SearchResultsViewController.initialScene.instantiate()
+        let controller = UISearchController(searchResultsController: searchResultsViewController)
         controller.searchBar.placeholder = "Search for a Movie or a Tv show"
         controller.searchBar.searchBarStyle = .minimal
         return controller
