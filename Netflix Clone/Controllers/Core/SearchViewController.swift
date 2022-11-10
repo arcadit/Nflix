@@ -9,15 +9,14 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
-    
+    @IBOutlet weak var discoverTable: UITableView! {
+        didSet {
+            discoverTable.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
+        }
+    }
+
     private var titles: [Title] = [Title]()
 
-    private let discoverTable: UITableView = {
-        let table = UITableView()
-        table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
-        return table
-    }()
-    
     private let searchController: UISearchController = {
         let controller = UISearchController(searchResultsController: SearchResultsViewController())
         controller.searchBar.placeholder = "Search for a Movie or a Tv show"
@@ -39,6 +38,7 @@ class SearchViewController: UIViewController {
         navigationItem.searchController = searchController
         
         navigationController?.navigationBar.tintColor = .white
+        
         fetchDiscoverMovies()
         
         searchController.searchResultsUpdater = self
