@@ -14,8 +14,13 @@ class MainTabBarViewController: UITabBarController {
         view.backgroundColor = .systemYellow
         
         let vc1 = UINavigationController(rootViewController: HomeViewController())
+<<<<<<< HEAD
         let vc2 = UINavigationController(rootViewController: StoryboardScene.UpcomingViewController.initialScene.instantiate())
+        let vc3 = UINavigationController(rootViewController: SearchViewController())
+=======
+        let vc2 = UINavigationController(rootViewController: UpcomingViewController())
         let vc3 = UINavigationController(rootViewController: StoryboardScene.SearchViewController.initialScene.instantiate())
+>>>>>>> origin/storyboard
         let vc4 = UINavigationController(rootViewController: DownloadsViewController())
         
         

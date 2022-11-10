@@ -12,18 +12,37 @@ class UpcomingViewController: UIViewController {
     
     private var titles: [Title] = [Title]()
     
+<<<<<<< HEAD
     @IBOutlet weak var upcomingTable: UITableView! {
         didSet {
             upcomingTable.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
         }
     }
+=======
+    private let upcomingTable: UITableView = {
+       
+        let table = UITableView()
+//      table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
+        return table
+    }()
+>>>>>>> origin/storyboard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Upcoming"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
+<<<<<<< HEAD
+        
+=======
 
+        // TODO
+        // Storyboard化で以下に置き換えが必要になる可能性あり
+        // table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
+        let nib = UINib(nibName: "TitleTableViewCell", bundle: nil) // カスタムセルクラス名で`nib`を作成する
+        upcomingTable.register(nib, forCellReuseIdentifier: TitleTableViewCell.identifier) //
+        view.addSubview(upcomingTable)
+>>>>>>> origin/storyboard
         upcomingTable.delegate = self
         upcomingTable.dataSource = self
         
