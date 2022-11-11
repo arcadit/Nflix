@@ -1,8 +1,5 @@
 # Xcode
 
-.gitignore
-Gemfile.lock
-
 ## Build generated
 build/
 DerivedData/
