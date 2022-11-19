@@ -12,39 +12,26 @@ class UpcomingViewController: UIViewController {
     
     private var titles: [Title] = [Title]()
     
-    private let upcomingTable: UITableView = {
-       
-        let table = UITableView()
-//      table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
-        return table
-    }()
+    @IBOutlet weak var upcomingTable: UITableView! {
+        didSet {
+            upcomingTable.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
         title = "Upcoming"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
-
-        // TODO
-        // Storyboard化で以下に置き換えが必要になる可能性あり
-        // table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
-        let nib = UINib(nibName: "TitleTableViewCell", bundle: nil) // カスタムセルクラス名で`nib`を作成する
-        upcomingTable.register(nib, forCellReuseIdentifier: TitleTableViewCell.identifier) //
-        view.addSubview(upcomingTable)
+        
+        let nib = UINib(nibName: "TitleTableViewCell", bundle: nil)
+        upcomingTable.register(nib, forCellReuseIdentifier: TitleTableViewCell.identifier)
+        
         upcomingTable.delegate = self
         upcomingTable.dataSource = self
         
         fetchUpcoming()
-        
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        upcomingTable.frame = view.bounds
-    }
-    
-    
     
     private func fetchUpcoming() {
         APICaller.shared.getUpcomingMovies { [weak self] result in
@@ -61,7 +48,6 @@ class UpcomingViewController: UIViewController {
         }
     }
 }
-
 
 extension UpcomingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -110,9 +96,5 @@ extension UpcomingViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
- 
-    
-
-    
 }
 
