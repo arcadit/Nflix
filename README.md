@@ -37,6 +37,7 @@ XcodeからNetflix Clone.xcworkspaceを開き、ビルド
 Dark Modeを設定する
 設定　-> デベロッパ -> Appearance -> Dark Appearance
 
+
 ## 使用技術
 
 * Xcode14.1
@@ -49,3 +50,16 @@ Dark Modeを設定する
 ## アーキテクチャ
 
 MVVM
+
+## 開発方法
+
+### メッセージ
+
+アプリに表示するラベルやメッセージの表示には、多言語対応(Localization)機能を使用します。
+
+1. Localizable.stringsファイルにキーとメッセージを定義
+2. ビルドをするとSwiftGenによりL10nクラスに定義したメッセージが生成される。ソースコードからL10nクラスにキー名を指定してメッセージを参照。
+
+```
+L10n.home
+```
