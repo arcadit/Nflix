@@ -32,6 +32,11 @@
 		0AE30378277F600E00CBC18F /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE30377277F600E00CBC18F /* SearchResultsViewController.swift */; };
 		0AF8A46B2787BC2100FFE877 /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8A46A2787BC2100FFE877 /* TitlePreviewViewController.swift */; };
 		0AF8A46D2787BEA400FFE877 /* TitlePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8A46C2787BEA400FFE877 /* TitlePreviewViewModel.swift */; };
+		713135802929A24600F89CBF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7131357F2929A24600F89CBF /* Localizable.strings */; };
+		713135862929A55E00F89CBF /* StoryboardSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713135822929A55E00F89CBF /* StoryboardSegues.swift */; };
+		713135872929A55E00F89CBF /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713135832929A55E00F89CBF /* strings.swift */; };
+		713135882929A55E00F89CBF /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713135842929A55E00F89CBF /* StoryboardScenes.swift */; };
+		713135892929A55E00F89CBF /* AssetsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713135852929A55E00F89CBF /* AssetsImages.swift */; };
 		D4D16ED0913056A4CF424592 /* Pods_Netflix_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43935CE2F8DBE0643BDFFB90 /* Pods_Netflix_Clone.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +68,11 @@
 		0AF8A46C2787BEA400FFE877 /* TitlePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewModel.swift; sourceTree = "<group>"; };
 		2C5DE074D8C5D9BB260CE9BC /* Pods-Netflix Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netflix Clone.release.xcconfig"; path = "Target Support Files/Pods-Netflix Clone/Pods-Netflix Clone.release.xcconfig"; sourceTree = "<group>"; };
 		43935CE2F8DBE0643BDFFB90 /* Pods_Netflix_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netflix_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7131357F2929A24600F89CBF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		713135822929A55E00F89CBF /* StoryboardSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardSegues.swift; sourceTree = "<group>"; };
+		713135832929A55E00F89CBF /* strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
+		713135842929A55E00F89CBF /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
+		713135852929A55E00F89CBF /* AssetsImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsImages.swift; sourceTree = "<group>"; };
 		BFDA06AABD39E9A16860212F /* Pods-Netflix Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netflix Clone.debug.xcconfig"; path = "Target Support Files/Pods-Netflix Clone/Pods-Netflix Clone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +159,7 @@
 		0A6209A52734603E00A88D71 /* Netflix Clone */ = {
 			isa = PBXGroup;
 			children = (
+				713135812929A55E00F89CBF /* CodeGenerated */,
 				0A1942CE274A61C600B3FA93 /* Managers */,
 				0A1942CD274A61C000B3FA93 /* Resources */,
 				0A1942CC274A61A100B3FA93 /* Models */,
@@ -159,6 +170,7 @@
 				0A6209B12734603E00A88D71 /* LaunchScreen.storyboard */,
 				0A6209B42734603E00A88D71 /* Info.plist */,
 				0A28420A2799EBED0023560C /* NetflixCloneModel.xcdatamodeld */,
+				7131357F2929A24600F89CBF /* Localizable.strings */,
 			);
 			path = "Netflix Clone";
 			sourceTree = "<group>";
@@ -200,6 +212,17 @@
 				2C5DE074D8C5D9BB260CE9BC /* Pods-Netflix Clone.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		713135812929A55E00F89CBF /* CodeGenerated */ = {
+			isa = PBXGroup;
+			children = (
+				713135822929A55E00F89CBF /* StoryboardSegues.swift */,
+				713135832929A55E00F89CBF /* strings.swift */,
+				713135842929A55E00F89CBF /* StoryboardScenes.swift */,
+				713135852929A55E00F89CBF /* AssetsImages.swift */,
+			);
+			path = CodeGenerated;
 			sourceTree = "<group>";
 		};
 		C16077ABC2D7039B0D6FB170 /* Frameworks */ = {
@@ -278,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A6209B32734603E00A88D71 /* LaunchScreen.storyboard in Resources */,
+				713135802929A24600F89CBF /* Localizable.strings in Resources */,
 				0A6209B02734603E00A88D71 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,8 +367,12 @@
 				0A6291FA2756F1B900082232 /* HeroHeaderUIView.swift in Sources */,
 				0A6209C2273461A800A88D71 /* DownloadsViewController.swift in Sources */,
 				0A6209A72734603E00A88D71 /* AppDelegate.swift in Sources */,
+				713135882929A55E00F89CBF /* StoryboardScenes.swift in Sources */,
+				713135872929A55E00F89CBF /* strings.swift in Sources */,
 				0AE30378277F600E00CBC18F /* SearchResultsViewController.swift in Sources */,
+				713135862929A55E00F89CBF /* StoryboardSegues.swift in Sources */,
 				0A5AAA9D2769057B00149719 /* Extensions.swift in Sources */,
+				713135892929A55E00F89CBF /* AssetsImages.swift in Sources */,
 				0AD8A1BE2786FDB000612F1E /* YoutubeSearchResponse.swift in Sources */,
 				0A6209A92734603E00A88D71 /* SceneDelegate.swift in Sources */,
 				0AF8A46D2787BEA400FFE877 /* TitlePreviewViewModel.swift in Sources */,
@@ -374,6 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -435,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
