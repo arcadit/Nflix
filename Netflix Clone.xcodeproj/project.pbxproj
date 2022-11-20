@@ -34,11 +34,13 @@
 		0AF8A46D2787BEA400FFE877 /* TitlePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8A46C2787BEA400FFE877 /* TitlePreviewViewModel.swift */; };
 		7127135629140D490011FB80 /* StoryboardSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127135429140D490011FB80 /* StoryboardSegues.swift */; };
 		7127135729140D490011FB80 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127135529140D490011FB80 /* StoryboardScenes.swift */; };
-		71840F2B291632FC00F31CF5 /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71840F2A291632FC00F31CF5 /* TitleTableViewCell.xib */; };
 		712713592914F45D0011FB80 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712713582914F45D0011FB80 /* SearchViewController.storyboard */; };
 		7127135B2914FF2C0011FB80 /* SearchResultsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7127135A2914FF2C0011FB80 /* SearchResultsViewController.storyboard */; };
+		71840F2B291632FC00F31CF5 /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71840F2A291632FC00F31CF5 /* TitleTableViewCell.xib */; };
 		71B111A62913E982000DD16C /* TitlePreviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B111A52913E982000DD16C /* TitlePreviewViewController.storyboard */; };
 		90FE456F291B896D008616EC /* UpcomingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90FE456E291B896D008616EC /* UpcomingViewController.storyboard */; };
+		90FEED8C292514DB0060DE90 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90FEED8B292514DB0060DE90 /* HomeViewController.storyboard */; };
+		90FEED8E29262B510060DE90 /* HeroHeaderUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90FEED8D29262B510060DE90 /* HeroHeaderUIView.xib */; };
 		D4D16ED0913056A4CF424592 /* Pods_Netflix_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43935CE2F8DBE0643BDFFB90 /* Pods_Netflix_Clone.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,11 +74,13 @@
 		43935CE2F8DBE0643BDFFB90 /* Pods_Netflix_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netflix_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7127135429140D490011FB80 /* StoryboardSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardSegues.swift; sourceTree = "<group>"; };
 		7127135529140D490011FB80 /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
-		71840F2A291632FC00F31CF5 /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
 		712713582914F45D0011FB80 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
 		7127135A2914FF2C0011FB80 /* SearchResultsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResultsViewController.storyboard; sourceTree = "<group>"; };
+		71840F2A291632FC00F31CF5 /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
 		71B111A52913E982000DD16C /* TitlePreviewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TitlePreviewViewController.storyboard; sourceTree = "<group>"; };
 		90FE456E291B896D008616EC /* UpcomingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpcomingViewController.storyboard; sourceTree = "<group>"; };
+		90FEED8B292514DB0060DE90 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		90FEED8D29262B510060DE90 /* HeroHeaderUIView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroHeaderUIView.xib; sourceTree = "<group>"; };
 		BFDA06AABD39E9A16860212F /* Pods-Netflix Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netflix Clone.debug.xcconfig"; path = "Target Support Files/Pods-Netflix Clone/Pods-Netflix Clone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +106,7 @@
 				0A5AAAA6276AE1D500149719 /* TitleCollectionViewCell.swift */,
 				0A7C94D427764E8C0072AE85 /* TitleTableViewCell.swift */,
 				71840F2A291632FC00F31CF5 /* TitleTableViewCell.xib */,
+				90FEED8D29262B510060DE90 /* HeroHeaderUIView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,7 +196,6 @@
 		0AE30379277F603200CBC18F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0A6209BB2734615B00A88D71 /* HomeViewController.swift */,
 				0A6209BD2734617600A88D71 /* UpcomingViewController.swift */,
 				90FE456E291B896D008616EC /* UpcomingViewController.storyboard */,
 				0A6209BB2734615B00A88D71 /* HomeViewController.swift */,
@@ -199,6 +203,7 @@
 				0A6209AA2734603E00A88D71 /* MainTabBarViewController.swift */,
 				0A6209C1273461A800A88D71 /* DownloadsViewController.swift */,
 				712713582914F45D0011FB80 /* SearchViewController.storyboard */,
+				90FEED8B292514DB0060DE90 /* HomeViewController.storyboard */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -307,10 +312,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90FEED8E29262B510060DE90 /* HeroHeaderUIView.xib in Resources */,
 				71840F2B291632FC00F31CF5 /* TitleTableViewCell.xib in Resources */,
 				7127135B2914FF2C0011FB80 /* SearchResultsViewController.storyboard in Resources */,
 				71B111A62913E982000DD16C /* TitlePreviewViewController.storyboard in Resources */,
 				0A6209B32734603E00A88D71 /* LaunchScreen.storyboard in Resources */,
+				90FEED8C292514DB0060DE90 /* HomeViewController.storyboard in Resources */,
 				0A6209B02734603E00A88D71 /* Assets.xcassets in Resources */,
 				712713592914F45D0011FB80 /* SearchViewController.storyboard in Resources */,
 				90FE456F291B896D008616EC /* UpcomingViewController.storyboard in Resources */,
