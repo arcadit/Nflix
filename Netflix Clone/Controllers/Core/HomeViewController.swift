@@ -84,6 +84,7 @@ class HomeViewController: UIViewController  {
             UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
         ]
         navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.backgroundColor = .black
     }
     
     
@@ -211,8 +212,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 extension HomeViewController: CollectionViewTableViewCellDelegate {
     func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel) {
         DispatchQueue.main.async { [weak self] in
-            let vc = TitlePreviewViewController()
-            vc.configure(with: viewModel)
+            let vc = StoryboardScene.TitlePreviewViewController.initialScene.instantiate()
+            vc.viewModel = viewModel
             self?.navigationController?.pushViewController(vc, animated: true)
         }
     }
