@@ -58,21 +58,13 @@ class HomeViewController: UIViewController  {
                 
                 self?.randomTrendingMovie = selectedTitle
                 
-                DispatchQueue.main.async {
-                    headerView.configure(model: TitleViewModel(titleName: selectedTitle?.original_title ?? "", posterURL: selectedTitle?.poster_path ?? ""), width: Int(UIScreen.main.bounds.width))
-                }
-                
+                headerView.configure(model: TitleViewModel(titleName: selectedTitle?.original_title ?? "", posterURL: selectedTitle?.poster_path ?? ""), width: Int(UIScreen.main.bounds.width))
                 
             case .failure(let erorr):
                 print(erorr.localizedDescription)
             }
         }
-        
-
-
     }
-
-    
     
     private func configureNavbar() {
         var image = UIImage(named: "netflixLogo")
