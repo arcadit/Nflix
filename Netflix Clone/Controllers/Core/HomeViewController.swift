@@ -57,7 +57,6 @@ class HomeViewController: UIViewController  {
                 let selectedTitle = titles.randomElement()
                 
                 self?.randomTrendingMovie = selectedTitle
-                
                 headerView.configure(model: TitleViewModel(titleName: selectedTitle?.original_title ?? "", posterURL: selectedTitle?.poster_path ?? ""), width: Int(UIScreen.main.bounds.width))
                 
             case .failure(let erorr):
@@ -79,15 +78,10 @@ class HomeViewController: UIViewController  {
         navigationController?.navigationBar.backgroundColor = .black
     }
     
-    
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         homeFeedTable.frame = view.bounds
     }
-
-
-    
 }
 
 
@@ -196,7 +190,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
     }
-
 }
 
 
@@ -210,4 +203,3 @@ extension HomeViewController: CollectionViewTableViewCellDelegate {
         }
     }
 }
-
