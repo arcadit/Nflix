@@ -24,7 +24,7 @@ class HeroHeaderUIView: UIView {
         gradientLayer.frame = bounds
         imageView.layer.addSublayer(gradientLayer)
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }

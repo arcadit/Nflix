@@ -64,7 +64,7 @@ class HomeViewController: UIViewController  {
             }
         }
     }
-    
+
     private func configureNavbar() {
         var image = UIImage(named: "netflixLogo")
         image = image?.withRenderingMode(.alwaysOriginal)
@@ -77,7 +77,7 @@ class HomeViewController: UIViewController  {
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.backgroundColor = .black
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         homeFeedTable.frame = view.bounds
