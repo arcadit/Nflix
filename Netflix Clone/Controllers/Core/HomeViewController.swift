@@ -24,32 +24,32 @@ class HomeViewController: UIViewController  {
     
     
     private var randomTrendingMovie: Title?
-    private var headerView: HeroHeaderUIView?
+    @IBOutlet weak var homeFeedTable: UITableView! {
+        didSet{
+            homeFeedTable.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
+        }
+    }
+    
     
     let sectionTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Upcoming Movies", "Top rated"]
     
-    private let homeFeedTable: UITableView = {
-        let table = UITableView(frame: .zero, style: .grouped)
-        table.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
-        return table
-    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        view.addSubview(homeFeedTable)
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
         
         configureNavbar()
         
-        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
+        let headerNib = UINib(nibName: "HeroHeaderUIView", bundle: nil)
+        let headerView = headerNib.instantiate(withOwner: self).first as! HeroHeaderUIView
+        configureHeroHeaderView(headerView: headerView)
+        headerView.addGradient(headerView.heroImageView)
         homeFeedTable.tableHeaderView = headerView
-        configureHeroHeaderView()
-        
     }
     
-    private func configureHeroHeaderView() {
+    private func configureHeroHeaderView(headerView: HeroHeaderUIView) {
 
         APICaller.shared.getTrendingMovies { [weak self] result in
             switch result {
@@ -57,7 +57,7 @@ class HomeViewController: UIViewController  {
                 let selectedTitle = titles.randomElement()
                 
                 self?.randomTrendingMovie = selectedTitle
-                self?.headerView?.configure(with: TitleViewModel(titleName: selectedTitle?.original_title ?? "", posterURL: selectedTitle?.poster_path ?? ""))
+                headerView.configure(model: TitleViewModel(titleName: selectedTitle?.original_title ?? "", posterURL: selectedTitle?.poster_path ?? ""), width: Int(UIScreen.main.bounds.width))
                 
             case .failure(let erorr):
                 print(erorr.localizedDescription)
