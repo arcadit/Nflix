@@ -17,6 +17,11 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<Netflix_Clone.HomeViewController>(storyboard: Self.self)
   }
+  internal enum DownloadsViewController: StoryboardType {
+    internal static let storyboardName = "DownloadsViewController"
+
+    internal static let initialScene = InitialSceneType<Netflix_Clone.DownloadsViewController>(storyboard: Self.self)
+  }
   internal enum SearchResultsViewController: StoryboardType {
     internal static let storyboardName = "SearchResultsViewController"
 

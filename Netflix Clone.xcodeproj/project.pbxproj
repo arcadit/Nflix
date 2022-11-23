@@ -36,6 +36,7 @@
 		7127135729140D490011FB80 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127135529140D490011FB80 /* StoryboardScenes.swift */; };
 		712713592914F45D0011FB80 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712713582914F45D0011FB80 /* SearchViewController.storyboard */; };
 		7127135B2914FF2C0011FB80 /* SearchResultsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7127135A2914FF2C0011FB80 /* SearchResultsViewController.storyboard */; };
+		7131358B292CFF5300F89CBF /* DownloadsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7131358A292CFF5300F89CBF /* DownloadsViewController.storyboard */; };
 		71840F2B291632FC00F31CF5 /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71840F2A291632FC00F31CF5 /* TitleTableViewCell.xib */; };
 		71B111A62913E982000DD16C /* TitlePreviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B111A52913E982000DD16C /* TitlePreviewViewController.storyboard */; };
 		90FE456F291B896D008616EC /* UpcomingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90FE456E291B896D008616EC /* UpcomingViewController.storyboard */; };
@@ -76,6 +77,7 @@
 		7127135529140D490011FB80 /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
 		712713582914F45D0011FB80 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
 		7127135A2914FF2C0011FB80 /* SearchResultsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResultsViewController.storyboard; sourceTree = "<group>"; };
+		7131358A292CFF5300F89CBF /* DownloadsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DownloadsViewController.storyboard; sourceTree = "<group>"; };
 		71840F2A291632FC00F31CF5 /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
 		71B111A52913E982000DD16C /* TitlePreviewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TitlePreviewViewController.storyboard; sourceTree = "<group>"; };
 		90FE456E291B896D008616EC /* UpcomingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpcomingViewController.storyboard; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 		0AE30379277F603200CBC18F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7131358A292CFF5300F89CBF /* DownloadsViewController.storyboard */,
 				0A6209BD2734617600A88D71 /* UpcomingViewController.swift */,
 				90FE456E291B896D008616EC /* UpcomingViewController.storyboard */,
 				0A6209BB2734615B00A88D71 /* HomeViewController.swift */,
@@ -321,6 +324,7 @@
 				0A6209B02734603E00A88D71 /* Assets.xcassets in Resources */,
 				712713592914F45D0011FB80 /* SearchViewController.storyboard in Resources */,
 				90FE456F291B896D008616EC /* UpcomingViewController.storyboard in Resources */,
+				7131358B292CFF5300F89CBF /* DownloadsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
