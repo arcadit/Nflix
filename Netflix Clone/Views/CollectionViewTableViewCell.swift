@@ -27,7 +27,7 @@ class CollectionViewTableViewCell: UITableViewCell {
         let view = UINib(nibName: "CollectionViewTableViewCell", bundle: nil).instantiate(withOwner: self, options: nil).first as! UITableViewCell
         contentView.addSubview(view)
         
-        collectionView.register(TitleCollectionViewCell.self, forCellWithReuseIdentifier: TitleCollectionViewCell.identifier)
+        collectionView.register(UINib(nibName: TitleCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: TitleCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
     }
