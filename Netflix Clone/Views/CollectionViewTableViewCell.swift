@@ -20,19 +20,14 @@ class CollectionViewTableViewCell: UITableViewCell {
     
     private var titles: [Title] = [Title]()
     
-    private let collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 140, height: 200)
-        layout.scrollDirection = .horizontal
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(TitleCollectionViewCell.self, forCellWithReuseIdentifier: TitleCollectionViewCell.identifier)
-        return collectionView
-    }()
-    
+    @IBOutlet private weak var collectionView: UICollectionView!
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.addSubview(collectionView)
+        let view = UINib(nibName: "CollectionViewTableViewCell", bundle: nil).instantiate(withOwner: self, options: nil).first as! UITableViewCell
+        contentView.addSubview(view)
         
+        collectionView.register(UINib(nibName: TitleCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: TitleCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
     }
